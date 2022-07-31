@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "169812695412",
+    "project_id": "trackerapp-354610",
+    "storage_bucket": "trackerapp-354610.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169812695412:android:8f70bb5cccbe600950b421",
+        "android_client_info": {
+          "package_name": "com.buswhere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169812695412-ae95873q74lk3o7f5rgv0upb4pf77d4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa2rAWw99ZLhUB94QRzOCcuNeUk-hiFE4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169812695412-ae95873q74lk3o7f5rgv0upb4pf77d4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
