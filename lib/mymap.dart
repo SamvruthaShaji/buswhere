@@ -1,13 +1,11 @@
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart' as loc;
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 
 class MyMap extends StatefulWidget {
   final String user_id;
-  const MyMap(this.user_id);
+  MyMap(this.user_id);
   @override
   _MyMapState createState() => _MyMapState();
 }

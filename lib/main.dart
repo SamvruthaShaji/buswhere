@@ -3,12 +3,10 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
 import 'package:location/location.dart' as loc;
 import 'package:permission_handler/permission_handler.dart';
 
 import 'mymap.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,22 +43,21 @@ class _MyAppState extends State<MyApp> {
               onPressed: () {
                 _getLocation();
               },
-
-              child: Text('add my location')),
+              child: Text('share location')),
           TextButton(
               onPressed: () {
                 _listenLocation();
               },
-              child: Text('enable live location')),
+              child: Text(' ')),
           TextButton(
               onPressed: () {
                 _stopListening();
               },
-              child: Text('stop live location')),
+              child: Text(' ')),
           Expanded(
               child: StreamBuilder(
                 stream:
-                FirebaseFirestore.instance.collection('Location').snapshots(),
+                FirebaseFirestore.instance.collection('location').snapshots(),
                 builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
                   if (!snapshot.hasData) {
                     return Center(child: CircularProgressIndicator());
@@ -105,7 +102,7 @@ class _MyAppState extends State<MyApp> {
       await FirebaseFirestore.instance.collection('location').doc('user1').set({
         'latitude': _locationResult.latitude,
         'longitude': _locationResult.longitude,
-        'name': 'bus1'
+        'name': 'bus 1'
       }, SetOptions(merge: true));
     } catch (e) {
       print(e);
@@ -123,7 +120,7 @@ class _MyAppState extends State<MyApp> {
       await FirebaseFirestore.instance.collection('location').doc('user1').set({
         'latitude': currentlocation.latitude,
         'longitude': currentlocation.longitude,
-        'name': 'john',
+        'name': 'bus 1'
       }, SetOptions(merge: true));
     });
   }
